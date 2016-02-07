@@ -1,3 +1,6 @@
+ArrayList enemies = new ArrayList();
+ArrayList bullets = new ArrayList();
+
 void setup() 
 {
     background(0);
