@@ -9,11 +9,6 @@ class Ship
     drawSprite(x,y);
   }//End draw()
   
-   void UpdateObj()
-  {
-    
-  }//End UpdateObj()
-  
   void drawSprite(int xpos, int ypos)
   {
     int j,i;
@@ -22,7 +17,7 @@ class Ship
     {
        String row = (String) sprite[i];
        
-       for(j = 0; j < row.length(); j++);
+       for(j = 0; j < row.length(); j++)
        {
          if(row.charAt( j ) == '1')
          {
@@ -31,5 +26,10 @@ class Ship
        }//End nested for()
     }//End for()
   }//End drawSprite()
+  
+     void UpdateObj()
+  {
+    
+  }//End UpdateObj()
   
 }//End SpaceShip
