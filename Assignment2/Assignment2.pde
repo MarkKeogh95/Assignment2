@@ -1,3 +1,6 @@
+import processing.sound.*;
+SoundFile audio;
+
 ArrayList Enemies = new ArrayList();
 ArrayList Bullets = new ArrayList();
 int psize = 4;
@@ -21,6 +24,8 @@ void setup()
     size(800, 600);
     enemy = loadImage("Alien.png");
     enemy.resize(40,40);
+    audio = new SoundFile( this, "SpaceInvader.mp3");
+    audio.loop();
     p1 = new Player();
 }//End setup()
 
