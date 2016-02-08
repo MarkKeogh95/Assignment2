@@ -3,8 +3,13 @@ ArrayList Bullets = new ArrayList();
 int psize = 4;
 int gsize = psize * 7 + 5;
 int rows=3;
-int spaceBetweenEnemies = 50;
-int enemiesperrow=3;
+int spaceBetweenEnemies = 40;
+int spaceBetweenRows = 40;
+int enemiesperrow=6;
+int StartPosXRows = 50;
+int OffsetPosXRows = 50;
+int PosXRows = StartPosXRows;
+boolean direction = true;
 PImage enemy;
 Player p1;
 
@@ -15,7 +20,7 @@ void setup()
     fill(255);
     size(800, 600);
     enemy = loadImage("Alien.png");
-    enemy.resize(50,50);
+    enemy.resize(40,40);
     p1 = new Player();
 }//End setup()
 
