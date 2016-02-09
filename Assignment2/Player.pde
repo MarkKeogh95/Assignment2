@@ -1,4 +1,4 @@
-class Player extends Ship
+/*class Player extends Ship
 {
     boolean Shoot = true;
     int Delay = 0;
@@ -14,4 +14,15 @@ class Player extends Ship
         sprite[3] = "0111110";
         sprite[4] = "1111111";
     }
-}
+    
+    /*if(keyPressed)
+    {
+      movePlayer();
+    }
+    
+    void movePlayer();
+    {
+      if(keyCode == LEFT)
+      {
+        
+      }*/

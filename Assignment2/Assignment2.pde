@@ -1,7 +1,6 @@
 import processing.sound.*;
 SoundFile audio;
 
-ArrayList Enemies = new ArrayList();
 ArrayList Bullets = new ArrayList();
 int psize = 4;
 int gsize = psize * 7 + 5;
@@ -14,7 +13,10 @@ int OffsetPosXRows = 50;
 int PosXRows = StartPosXRows;
 boolean direction = true;
 PImage enemy;
-Player p1;
+PImage Ship;
+Enemies Aliens;
+//Player p1;
+int a=0;
 
 void setup() 
 {
@@ -22,16 +24,20 @@ void setup()
     noStroke();
     fill(255);
     size(800, 600);
+    Ship = loadImage("Ship.png");
     enemy = loadImage("Alien.png");
     enemy.resize(40,40);
-    audio = new SoundFile( this, "SpaceInvader.mp3");
+    audio = new SoundFile(this, "SpaceInvader.mp3");
     audio.loop();
-    p1 = new Player();
+    Aliens = new Enemies();
+    //p1 = new Player();
 }//End setup()
 
 void draw()
-{
-    background(0);
-    Enemies();
-    p1.draw();
+{  
+   background(0);
+    Aliens.draw();
+    //p1.draw();
+
+    
 }//End draw()
