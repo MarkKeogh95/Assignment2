@@ -1,7 +1,7 @@
 import processing.sound.*;
 SoundFile audio;
 
-ArrayList Bullets = new ArrayList();
+ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 int psize = 4;
 int gsize = psize * 7 + 5;
 int rows=3;
@@ -13,7 +13,7 @@ int OffsetPosXRows = 500;
 int PosXRows = StartPosXRows;
 boolean direction = true;
 PImage enemy;
-PImage Ship;
+PImage Menu;
 Enemies Aliens;
 Player p1;
 int a=0;
@@ -24,7 +24,8 @@ void setup()
     noStroke();
     fill(255);
     size(800, 600);
-    Ship = loadImage("Ship.png");
+    Menu = loadImage("Start.png");
+    Menu.resize(800,600);
     enemy = loadImage("Alien.png");
     enemy.resize(40,40);
     audio = new SoundFile(this, "SpaceInvader.mp3");
@@ -33,11 +34,42 @@ void setup()
     p1 = new Player();
 }//End setup()
 
+boolean[] keys = new boolean[512];
+
+void keyPressed()
+{
+  if(key==' ')
+  {
+    a =' ';
+  }//end if
+  keys[keyCode] = true;
+}
+
+void keyReleased()
+{
+  keys[keyCode] = false;
+}
+
 void draw()
 {  
-   background(0);
-    Aliens.draw();
-    p1.draw();
+   background(Menu);
+   switch(a)
+   {
+     case ' ':
+     {
+       background(0);
+      Aliens.draw();
+    
+      p1.draw();
+      p1.update();
+      //Bullet.draw();
+      for(Bullet b: bullets)
+      {
+        b.update();
+        b.render();
+      }
+     }
+   }
 
     
 }//End draw()

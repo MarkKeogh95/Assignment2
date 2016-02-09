@@ -1,11 +1,14 @@
 class Ship
 {
+  PVector pos;
+  PVector forward;
+  float speed = 5.0f;
   int x,y;
   String PlayerShip[];
   
   void draw()
   {
-    Move();
+    //update();
     drawPlayerShip(x,y);
   }//End draw()
   
@@ -27,9 +30,9 @@ class Ship
     }//End for()
   }//End drawPlayerShip()
   
-     void Move()
+     /*void update()
   {
     
-  }//End Move()
+  }//End Move()*/
   
 }//End SpaceShip

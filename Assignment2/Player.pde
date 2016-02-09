@@ -1,7 +1,7 @@
 class Player extends Ship
 {
     boolean Shoot = true;
-    int Delay = 0;
+    int Reload = 0;
  
     Player() 
     {
@@ -15,15 +15,38 @@ class Player extends Ship
         PlayerShip[4] = "1111111";
     }
 
-    void Move()
+    void update()
     {
-      if(keyPressed && keyCode == LEFT)
+      if(keys['S'])
       {
         x -= 5;
       }
-      if(keyPressed && keyCode == RIGHT)
+      if(keys['D'])
       {
         x += 5;
       }
+      if (keys['A'])
+    {
+      // Create a new bullet instance and add it to the arraylist of bullets
+      Bullet bullet = new Bullet();
+      bullet.pos.x = pos.x;
+      bullet.pos.y = pos.y;
+      bullets.add(bullet);
+    }
+      /*if (keyPressed && keyCode == CONTROL && Shoot)
+      {
+            bullets.add(new Bullet(x,y));
+            Shoot = false;
+            Reload = 0;
+      }
+      
+      Reload++;
+      if(Reload >= 15)
+      {
+        Shoot = true;
+      }
+      Bullet bullet = new Bullet();
+      bullet.pos.x = pos.x;
+      bullet.pos.y = pos.y;*/
     }
 }
