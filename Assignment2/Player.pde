@@ -1,4 +1,4 @@
-/*class Player extends Ship
+class Player extends Ship
 {
     boolean Shoot = true;
     int Delay = 0;
@@ -14,6 +14,7 @@
         sprite[3] = "0111110";
         sprite[4] = "1111111";
     }
+}
     
     /*if(keyPressed)
     {

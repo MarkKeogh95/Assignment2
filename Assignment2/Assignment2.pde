@@ -15,7 +15,7 @@ boolean direction = true;
 PImage enemy;
 PImage Ship;
 Enemies Aliens;
-//Player p1;
+Player p1;
 int a=0;
 
 void setup() 
@@ -30,14 +30,14 @@ void setup()
     audio = new SoundFile(this, "SpaceInvader.mp3");
     audio.loop();
     Aliens = new Enemies();
-    //p1 = new Player();
+    p1 = new Player();
 }//End setup()
 
 void draw()
 {  
    background(0);
     Aliens.draw();
-    //p1.draw();
+    p1.draw();
 
     
 }//End draw()

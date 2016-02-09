@@ -1,8 +1,6 @@
-/*class Ship
+class Ship
 {
-  image(Ship,0,0);
-}
-  /*int x,y;
+  int x,y;
   String sprite[];
   
   void draw()
@@ -34,4 +32,4 @@
     
   }//End UpdateObj()
   
-}//End SpaceShip*/
+}//End SpaceShip
