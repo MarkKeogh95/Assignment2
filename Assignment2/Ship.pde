@@ -1,21 +1,21 @@
 class Ship
 {
   int x,y;
-  String sprite[];
+  String PlayerShip[];
   
   void draw()
   {
-    UpdateObj();
-    drawSprite(x,y);
+    Move();
+    drawPlayerShip(x,y);
   }//End draw()
   
-  void drawSprite(int xpos, int ypos)
+  void drawPlayerShip(int xpos, int ypos)
   {
     int j,i;
     
-    for(i = 0; i < sprite.length; i++)
+    for(i = 0; i < PlayerShip.length; i++)
     {
-       String row = (String) sprite[i];
+       String row = (String) PlayerShip[i];
        
        for(j = 0; j < row.length(); j++)
        {
@@ -25,11 +25,11 @@ class Ship
          }//End if()
        }//End nested for()
     }//End for()
-  }//End drawSprite()
+  }//End drawPlayerShip()
   
-     void UpdateObj()
+     void Move()
   {
     
-  }//End UpdateObj()
+  }//End Move()
   
 }//End SpaceShip
