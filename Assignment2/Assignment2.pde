@@ -4,7 +4,7 @@ SoundFile audio;
 ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 int psize = 4;
 int gsize = psize * 7 + 5;
-int rows=3;
+int rows=4;
 int spaceBetweenEnemies = 40;
 int spaceBetweenRows = 40;
 int enemiesperrow=6;
@@ -14,6 +14,7 @@ int PosXRows = StartPosXRows;
 boolean direction = true;
 PImage enemy;
 PImage Menu;
+PImage Stars;
 Enemies Aliens;
 Player p1;
 int a=0;
@@ -28,6 +29,8 @@ void setup()
     Menu.resize(800,600);
     enemy = loadImage("Alien.png");
     enemy.resize(40,40);
+    Stars = loadImage("Star.jpg");
+    Stars.resize(800,600);
     audio = new SoundFile(this, "SpaceInvader.mp3");
     audio.loop();
     Aliens = new Enemies();
@@ -57,7 +60,7 @@ void draw()
    {
      case ' ':
      {
-       background(0);
+       background(Stars);
       Aliens.draw();
     
       p1.draw();
