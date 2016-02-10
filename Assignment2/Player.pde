@@ -1,11 +1,7 @@
 class Player extends Ship
 {
-    boolean Shoot = true;
-    int Reload = 0;
- 
-    Player() 
+     Player() 
     {
-        x = width/gsize/2;
         y = height - (10 * psize);
         PlayerShip    = new String[5];
         PlayerShip[0] = "0001000";

@@ -4,6 +4,20 @@ class Enemies
   {
     drawAliens();
   }
+  
+  void Enemy(int posX, int posY)
+  {
+    image(enemy,posX,posY);
+  }
+
+  void EnemyRows(int posX, int posY)
+  {
+    for( int i=0; i<enemiesperrow; i++)
+    {
+       Enemy(posX + i * spaceBetweenEnemies ,posY);
+    }
+  }
+  
   void drawAliens()
   {
     for(int i=0; i<rows; i++)
@@ -24,16 +38,5 @@ class Enemies
     }
   }
   
-  void Enemy(int posX, int posY)
-  {
-    image(enemy,posX,posY);
-  }
-
-  void EnemyRows(int posX, int posY)
-  {
-    for( int i=0; i<enemiesperrow; i++)
-    {
-       Enemy(posX + i * spaceBetweenEnemies ,posY);
-    }
-  }
+  
 }

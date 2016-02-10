@@ -1,9 +1,11 @@
+//Import sound files
 import processing.sound.*;
 SoundFile audio;
 
+//New array for Bullets
 ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 int psize = 4;
-int gsize = psize * 7 + 5;
+int gsize = 2;
 int rows=4;
 int spaceBetweenEnemies = 40;
 int spaceBetweenRows = 40;
@@ -25,15 +27,21 @@ void setup()
     noStroke();
     fill(255);
     size(800, 600);
+    //Load menu image
     Menu = loadImage("Start.png");
     Menu.resize(800,600);
+    //load enemy image
     enemy = loadImage("Alien.png");
     enemy.resize(40,40);
+    //load stars background
     Stars = loadImage("Star.jpg");
     Stars.resize(800,600);
+    //load audio and loop it
     audio = new SoundFile(this, "SpaceInvader.mp3");
     audio.loop();
+    //Create new aliens instance
     Aliens = new Enemies();
+    //Create new player instance
     p1 = new Player();
 }//End setup()
 
@@ -55,9 +63,11 @@ void keyReleased()
 
 void draw()
 {  
+  //Starts with the background as image menu
    background(Menu);
    switch(a)
    {
+     //When space bar is pressed runs this case
      case ' ':
      {
        background(Stars);
