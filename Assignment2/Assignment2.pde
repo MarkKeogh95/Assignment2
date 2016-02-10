@@ -49,6 +49,7 @@ boolean[] keys = new boolean[512];
 
 void keyPressed()
 {
+  //If spacebar pressed a=spacebar , enters case switch case ' '
   if(key==' ')
   {
     a =' ';
@@ -71,11 +72,13 @@ void draw()
      case ' ':
      {
        background(Stars);
+       //Draws ALiens
       Aliens.draw();
     
+      //Draws Player ship
       p1.draw();
       p1.update();
-      //Bullet.draw();
+      //Draws Bullets
       for(Bullet b: bullets)
       {
         b.update();

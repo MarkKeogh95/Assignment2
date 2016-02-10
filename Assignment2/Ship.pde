@@ -25,14 +25,9 @@ class Ship
          if(row.charAt( j ) == '1')
          {
              rect(xpos+(j * psize), ypos+(i * psize), psize, psize);
+             fill(0,255,0);
          }//End if()
        }//End nested for()
     }//End for()
   }//End drawPlayerShip()
-  
-     /*void update()
-  {
-    
-  }//End Move()*/
-  
-}//End SpaceShip
+}//End Ship
