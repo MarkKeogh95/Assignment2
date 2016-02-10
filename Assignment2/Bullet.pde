@@ -16,17 +16,3 @@ class Bullet extends Ship
     pos.add(forward);
   }
 }
-  /*int a,b;
-  
-  Bullet( int posX, int posY)
-  {
-    a = posX +gsize/2-4;
-    b = posY;
-  }
-  
-  void draw()
-  {
-    rect(a,b,psize,psize);
-    b -= psize;
-  }
-}*/

@@ -33,20 +33,5 @@ class Player extends Ship
       bullet.pos.y = pos.y;
       bullets.add(bullet);
     }
-      /*if (keyPressed && keyCode == CONTROL && Shoot)
-      {
-            bullets.add(new Bullet(x,y));
-            Shoot = false;
-            Reload = 0;
-      }
-      
-      Reload++;
-      if(Reload >= 15)
-      {
-        Shoot = true;
-      }
-      Bullet bullet = new Bullet();
-      bullet.pos.x = pos.x;
-      bullet.pos.y = pos.y;*/
     }
 }
