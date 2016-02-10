@@ -4,8 +4,8 @@ SoundFile audio;
 
 //New array for Bullets
 ArrayList<Bullet> bullets = new ArrayList<Bullet>();
+int a=0;
 int psize = 4;
-int gsize = 2;
 int rows=4;
 int spaceBetweenEnemies = 40;
 int spaceBetweenRows = 40;
@@ -13,13 +13,16 @@ int enemiesperrow=6;
 int StartPosXRows = 30;
 int OffsetPosXRows = 500;
 int PosXRows = StartPosXRows;
+//Controls the direction of enemies
 boolean direction = true;
+//New images
 PImage enemy;
 PImage Menu;
 PImage Stars;
+
 Enemies Aliens;
 Player p1;
-int a=0;
+
 
 void setup() 
 {
