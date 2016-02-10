@@ -47,6 +47,7 @@ void setup()
 
 boolean[] keys = new boolean[512];
 
+//Recognises input from keyboard
 void keyPressed()
 {
   //If spacebar pressed a=spacebar , enters case switch case ' '
@@ -57,6 +58,7 @@ void keyPressed()
   keys[keyCode] = true;
 }
 
+//If nothings is pressed its false
 void keyReleased()
 {
   keys[keyCode] = false;
